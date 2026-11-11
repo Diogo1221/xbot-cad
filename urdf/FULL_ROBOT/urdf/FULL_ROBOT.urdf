@@ -1,0 +1,1364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="FULL_ROBOT">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="5.50896381814934E-17 0.005 -6.59709453568609E-18"
+        rpy="0 0 0" />
+      <mass
+        value="3.49875959603468" />
+      <inertia
+        ixx="0.142843166548546"
+        ixy="9.15299013468343E-18"
+        ixz="6.02188354278219E-18"
+        iyy="0.215671237349643"
+        iyz="7.94093388050907E-20"
+        izz="0.072886353676813" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.941176470588235 0.662745098039216 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="L1_TOP_BASE">
+    <inertial>
+      <origin
+        xyz="0.066268 0.093682 0.15138"
+        rpy="0 0 0" />
+      <mass
+        value="0.29131" />
+      <inertia
+        ixx="0.00042816"
+        ixy="9.0183E-06"
+        ixz="-0.0002539"
+        iyy="0.00088568"
+        iyz="1.8315E-05"
+        izz="0.00054997" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L1_TOP_BASE.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L1_TOP_BASE.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L1_BASE_FIXED_JOINT"
+    type="fixed">
+    <origin
+      xyz="0.085897 -0.11713 -0.064195"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="L1_TOP_BASE" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="L1_TOP">
+    <inertial>
+      <origin
+        xyz="0.0221952308578168 0.0240202490849267 0.0643846724938993"
+        rpy="0 0 0" />
+      <mass
+        value="0.3487531078713" />
+      <inertia
+        ixx="0.000187524238257858"
+        ixy="-2.29737558607507E-05"
+        ixz="6.88598865935469E-06"
+        iyy="0.000525715181167047"
+        iyz="2.10668258855787E-05"
+        izz="0.000629155246347275" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L1_TOP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L1_TOP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L1_TOP_JOINT"
+    type="continuous">
+    <origin
+      xyz="0.098103 0.097495 0.19357"
+      rpy="0 0 3.1416" />
+    <parent
+      link="L1_TOP_BASE" />
+    <child
+      link="L1_TOP" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="L1_TOP_LEG">
+    <inertial>
+      <origin
+        xyz="0.000848398320014515 -0.0584878865722417 -0.000219804066364959"
+        rpy="0 0 0" />
+      <mass
+        value="0.280895264857613" />
+      <inertia
+        ixx="0.000477498981459531"
+        ixy="2.27054368847772E-05"
+        ixz="-1.15687913179014E-07"
+        iyy="0.000121789474409189"
+        iyz="1.62880574489338E-06"
+        izz="0.000500940881516731" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L1_TOP_LEG.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L1_TOP_LEG.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L1_TOP_LEG_JOINT"
+    type="revolute">
+    <origin
+      xyz="0 0.06348 0.06225"
+      rpy="3.1416 0 0" />
+    <parent
+      link="L1_TOP" />
+    <child
+      link="L1_TOP_LEG" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L1_BOT">
+    <inertial>
+      <origin
+        xyz="-0.00810589673432391 -0.04470322344687 -0.000199211643370556"
+        rpy="0 0 0" />
+      <mass
+        value="0.207944502835741" />
+      <inertia
+        ixx="0.000113390478225879"
+        ixy="-1.16231328564859E-06"
+        ixz="-2.9414417787638E-07"
+        iyy="6.62386070547088E-05"
+        iyz="1.9464934885363E-07"
+        izz="0.000109677570408646" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L1_BOT.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L1_BOT.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L1_BOT_JOINT"
+    type="revolute">
+    <origin
+      xyz="0 -0.1508 1.7523E-05"
+      rpy="0 0 0" />
+    <parent
+      link="L1_TOP_LEG" />
+    <child
+      link="L1_BOT" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L1_BOT_ROTATIVE">
+    <inertial>
+      <origin
+        xyz="-0.00629277799922989 -0.0830414590467003 -0.0319165942565764"
+        rpy="0 0 0" />
+      <mass
+        value="0.285915108785353" />
+      <inertia
+        ixx="0.000391967075302375"
+        ixy="-5.69151188379913E-06"
+        ixz="-2.44368232196635E-06"
+        iyy="0.000304832593457514"
+        iyz="-3.38305290139418E-05"
+        izz="0.000379681330021841" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L1_BOT_ROTATIVE.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L1_BOT_ROTATIVE.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L1_BOT_ROTATIVE_JOINT"
+    type="continuous">
+    <origin
+      xyz="-4.4018E-05 -0.07834 0"
+      rpy="-1.5708 -1.5069 1.5708" />
+    <parent
+      link="L1_BOT" />
+    <child
+      link="L1_BOT_ROTATIVE" />
+    <axis
+      xyz="0.063863 0.99796 0" />
+  </joint>
+  <link
+    name="L1_WHEEL">
+    <inertial>
+      <origin
+        xyz="-4.78914199137925E-05 5.98216317226896E-06 -0.00359023596145527"
+        rpy="0 0 0" />
+      <mass
+        value="0.119058629565302" />
+      <inertia
+        ixx="4.58094329233997E-05"
+        ixy="-1.9616379315834E-08"
+        ixz="-2.09097389407202E-08"
+        iyy="4.57337393844556E-05"
+        iyz="9.0890188509746E-09"
+        izz="8.34370699782451E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L1_WHEEL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L1_WHEEL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L1_WHEEL_JOINT"
+    type="continuous">
+    <origin
+      xyz="-0.010628 -0.16608 0"
+      rpy="0 0 -1.2429" />
+    <parent
+      link="L1_BOT_ROTATIVE" />
+    <child
+      link="L1_WHEEL" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="L2_TOP_BASE">
+    <inertial>
+      <origin
+        xyz="-0.30248 0.019485 -0.08154"
+        rpy="0 0 0" />
+      <mass
+        value="0.29132" />
+      <inertia
+        ixx="0.00042815"
+        ixy="-1.0885E-05"
+        ixz="0.00025394"
+        iyy="0.00088569"
+        iyz="1.8315E-05"
+        izz="0.00054998" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L2_TOP_BASE.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L2_TOP_BASE.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L2_BASE_FIXED_JOINT"
+    type="fixed">
+    <origin
+      xyz="0.15048 -0.35 0.01"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="L2_TOP_BASE" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="L2_TOP">
+    <inertial>
+      <origin
+        xyz="0.0221949983349061 -0.0240198283287957 0.025079401297244"
+        rpy="0 0 0" />
+      <mass
+        value="0.348753610979952" />
+      <inertia
+        ixx="0.000187526811332358"
+        ixy="2.29679268817479E-05"
+        ixz="6.8878022459316E-06"
+        iyy="0.000525708073580581"
+        iyz="-2.10705413180138E-05"
+        izz="0.00062915043706821" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L2_TOP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L2_TOP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L2_TOP_JOINT"
+    type="continuous">
+    <origin
+      xyz="-0.33448 0.0233 0"
+      rpy="0 0 0" />
+    <parent
+      link="L2_TOP_BASE" />
+    <child
+      link="L2_TOP" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="L2_TOP_LEG">
+    <inertial>
+      <origin
+        xyz="-0.000848409598655203 -0.0584758395367051 -0.000317928041703941"
+        rpy="0 0 0" />
+      <mass
+        value="0.280895972656032" />
+      <inertia
+        ixx="0.000477499589011526"
+        ixy="-2.27053091299171E-05"
+        ixz="5.87866925344242E-08"
+        iyy="0.000121789687922361"
+        iyz="3.55112897543543E-06"
+        izz="0.000500941461211634" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L2_TOP_LEG.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L2_TOP_LEG.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L2_TOP_LEG_JOINT"
+    type="revolute">
+    <origin
+      xyz="0 -0.06348 0.022945"
+      rpy="3.1416 0 3.1416" />
+    <parent
+      link="L2_TOP" />
+    <child
+      link="L2_TOP_LEG" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L2_BOT">
+    <inertial>
+      <origin
+        xyz="-0.00794850668921257 -0.0448668047620108 -0.000256513063972397"
+        rpy="0 0 0" />
+      <mass
+        value="0.208564167255788" />
+      <inertia
+        ixx="0.000113456430350943"
+        ixy="-1.16231383051277E-06"
+        ixz="-2.94144434226504E-07"
+        iyy="6.63601815913167E-05"
+        iyz="1.94649478487618E-07"
+        izz="0.000109743521942452" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L2_BOT.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L2_BOT.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L2_BOT_JOINT"
+    type="revolute">
+    <origin
+      xyz="0 -0.1508 1.7523E-05"
+      rpy="3.1416 0 3.1416" />
+    <parent
+      link="L2_TOP_LEG" />
+    <child
+      link="L2_BOT" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L2_BOT_ROTATIVE">
+    <inertial>
+      <origin
+        xyz="-0.00629277793704125 -0.0830414587404023 -0.0319165942527508"
+        rpy="0 0 0" />
+      <mass
+        value="0.285915111401397" />
+      <inertia
+        ixx="0.000391967079545232"
+        ixy="-5.6915127429636E-06"
+        ixz="-2.44368179379238E-06"
+        iyy="0.000304832595004807"
+        iyz="-3.3830527058498E-05"
+        izz="0.000379681333389452" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L2_BOT_ROTATIVE.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L2_BOT_ROTATIVE.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L2_BOT_ROTATIVE_JOINT"
+    type="continuous">
+    <origin
+      xyz="5.5982E-05 -0.07834 0"
+      rpy="-1.5708 -1.5069 1.5708" />
+    <parent
+      link="L2_BOT" />
+    <child
+      link="L2_BOT_ROTATIVE" />
+    <axis
+      xyz="0.063863 0.99796 0" />
+  </joint>
+  <link
+    name="L2_WHEEL">
+    <inertial>
+      <origin
+        xyz="-4.78918805384421E-05 -5.98246856592377E-06 0.00359023574430006"
+        rpy="0 0 0" />
+      <mass
+        value="0.1190586279511" />
+      <inertia
+        ixx="4.58094327528205E-05"
+        ixy="1.96162381978169E-08"
+        ixz="2.09100489727803E-08"
+        iyy="4.57337388856893E-05"
+        iyz="9.08926688954472E-09"
+        izz="8.34370694053034E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L2_WHEEL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L2_WHEEL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L2_WHEEL_JOINT"
+    type="continuous">
+    <origin
+      xyz="-0.010628 -0.16608 0"
+      rpy="3.1416 0 -0.063906" />
+    <parent
+      link="L2_BOT_ROTATIVE" />
+    <child
+      link="L2_WHEEL" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="L3_TOP_BASE">
+    <inertial>
+      <origin
+        xyz="0.066268 0.093682 0.15138"
+        rpy="0 0 0" />
+      <mass
+        value="0.29131" />
+      <inertia
+        ixx="0.00042816"
+        ixy="9.0183E-06"
+        ixz="-0.0002539"
+        iyy="0.00088568"
+        iyz="1.8315E-05"
+        izz="0.00054997" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L3_TOP_BASE.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L3_TOP_BASE.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L3_BASE_FIXED_JOINT"
+    type="fixed">
+    <origin
+      xyz="-0.085897 0.11713 -0.064195"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="L3_TOP_BASE" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="L3_TOP">
+    <inertial>
+      <origin
+        xyz="0.0221952338378019 0.0240202531918055 0.0643846711477206"
+        rpy="0 0 0" />
+      <mass
+        value="0.34875314122273" />
+      <inertia
+        ixx="0.000187524336284063"
+        ixy="-2.29738375532828E-05"
+        ixz="6.88600986956967E-06"
+        iyy="0.000525715261754127"
+        iyz="2.10668496298571E-05"
+        izz="0.000629155412808265" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L3_TOP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L3_TOP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L3_TOP_JOINT"
+    type="continuous">
+    <origin
+      xyz="0.098103 0.097495 0.19357"
+      rpy="0 0 3.1416" />
+    <parent
+      link="L3_TOP_BASE" />
+    <child
+      link="L3_TOP" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="L3_TOP_LEG">
+    <inertial>
+      <origin
+        xyz="0.00084839783213328 -0.0584878878108625 -0.000219803667961871"
+        rpy="0 0 0" />
+      <mass
+        value="0.280895270238506" />
+      <inertia
+        ixx="0.000477499004380842"
+        ixy="2.27054318421729E-05"
+        ixz="-1.15686257076415E-07"
+        iyy="0.000121789477858476"
+        iyz="1.62881290934802E-06"
+        izz="0.00050094090332406" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L3_TOP_LEG.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L3_TOP_LEG.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L3_TOP_LEG_JOINT"
+    type="revolute">
+    <origin
+      xyz="0 0.06348 0.06225"
+      rpy="3.1416 0 0" />
+    <parent
+      link="L3_TOP" />
+    <child
+      link="L3_TOP_LEG" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L3_BOT">
+    <inertial>
+      <origin
+        xyz="-0.00800589674763061 -0.0447032233774279 -0.000199211638500674"
+        rpy="0 0 0" />
+      <mass
+        value="0.207944502606799" />
+      <inertia
+        ixx="0.000113390478220571"
+        ixy="-1.16231330235309E-06"
+        ixz="-2.9414418395324E-07"
+        iyy="6.62386070470382E-05"
+        iyz="1.9464935825706E-07"
+        izz="0.000109677570395799" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L3_BOT.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L3_BOT.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L3_BOT_JOINT"
+    type="revolute">
+    <origin
+      xyz="0 -0.1508 1.7523E-05"
+      rpy="0 0 0" />
+    <parent
+      link="L3_TOP_LEG" />
+    <child
+      link="L3_BOT" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L3_BOT_ROTATIVE">
+    <inertial>
+      <origin
+        xyz="-0.00629277802453621 -0.0830414590974116 -0.0319165941357002"
+        rpy="0 0 0" />
+      <mass
+        value="0.285915109275161" />
+      <inertia
+        ixx="0.000391967075166741"
+        ixy="-5.69151205487302E-06"
+        ixz="-2.4436822265639E-06"
+        iyy="0.000304832593558569"
+        iyz="-3.38305289401813E-05"
+        izz="0.000379681329974118" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L3_BOT_ROTATIVE.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L3_BOT_ROTATIVE.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L3_BOT_ROTATIVE_JOINT"
+    type="continuous">
+    <origin
+      xyz="5.5982E-05 -0.07834 0"
+      rpy="-1.5708 -1.5069 1.5708" />
+    <parent
+      link="L3_BOT" />
+    <child
+      link="L3_BOT_ROTATIVE" />
+    <axis
+      xyz="0.063863 0.99796 0" />
+  </joint>
+  <link
+    name="L3_WHEEL">
+    <inertial>
+      <origin
+        xyz="-4.78918789670879E-05 -5.98246966176941E-06 0.00359023574135467"
+        rpy="0 0 0" />
+      <mass
+        value="0.119058627929316" />
+      <inertia
+        ixx="4.5809432749462E-05"
+        ixy="1.96162410034262E-08"
+        ixz="2.09100479120485E-08"
+        iyy="4.57337388784973E-05"
+        iyz="9.08926743717603E-09"
+        izz="8.34370693961142E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L3_WHEEL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L3_WHEEL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L3_WHEEL_JOINT"
+    type="continuous">
+    <origin
+      xyz="-0.010628 -0.16608 0"
+      rpy="3.1416 0 -0.063906" />
+    <parent
+      link="L3_BOT_ROTATIVE" />
+    <child
+      link="L3_WHEEL" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="L4_TOP_BASE">
+    <inertial>
+      <origin
+        xyz="-0.30248 0.019485 -0.08154"
+        rpy="0 0 0" />
+      <mass
+        value="0.29132" />
+      <inertia
+        ixx="0.00042815"
+        ixy="-1.0885E-05"
+        ixz="0.00025394"
+        iyy="0.00088569"
+        iyz="1.8315E-05"
+        izz="0.00054998" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L4_TOP_BASE.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L4_TOP_BASE.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L4_BASE_FIXED_JOINT"
+    type="fixed">
+    <origin
+      xyz="-0.15048 0.35 0.01"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="L4_TOP_BASE" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="L4_TOP">
+    <inertial>
+      <origin
+        xyz="0.0221949992630854 -0.0240198289206152 0.0250794011051028"
+        rpy="0 0 0" />
+      <mass
+        value="0.34875361826172" />
+      <inertia
+        ixx="0.000187526821501874"
+        ixy="2.2967942965454E-05"
+        ixz="6.88780595609815E-06"
+        iyy="0.00052570810119416"
+        iyz="-2.10705435012267E-05"
+        izz="0.000629150473860578" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L4_TOP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L4_TOP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L4_TOP_JOINT"
+    type="continuous">
+    <origin
+      xyz="-0.33448 0.0233 0"
+      rpy="0 0 0" />
+    <parent
+      link="L4_TOP_BASE" />
+    <child
+      link="L4_TOP" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="L4_TOP_LEG">
+    <inertial>
+      <origin
+        xyz="-0.000848409653985693 -0.0584758395776065 -0.000317928031475012"
+        rpy="0 0 0" />
+      <mass
+        value="0.280895973131879" />
+      <inertia
+        ixx="0.000477499589186298"
+        ixy="-2.27053091183443E-05"
+        ixz="5.87867024410539E-08"
+        iyy="0.000121789688046896"
+        iyz="3.55112896884737E-06"
+        izz="0.000500941461276312" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L4_TOP_LEG.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L4_TOP_LEG.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L4_TOP_LEG_JOINT"
+    type="revolute">
+    <origin
+      xyz="0 -0.06348 0.022945"
+      rpy="3.1416 0 3.1416" />
+    <parent
+      link="L4_TOP" />
+    <child
+      link="L4_TOP_LEG" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L4_BOT">
+    <inertial>
+      <origin
+        xyz="-0.00804850661423168 -0.0448668047345281 -0.000256512974911249"
+        rpy="0 0 0" />
+      <mass
+        value="0.208564165797973" />
+      <inertia
+        ixx="0.00011345642957395"
+        ixy="-1.16231333514606E-06"
+        ixz="-2.94144105205586E-07"
+        iyy="6.63601809547921E-05"
+        iyz="1.9464984691521E-07"
+        izz="0.000109743521006796" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L4_BOT.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L4_BOT.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L4_BOT_JOINT"
+    type="revolute">
+    <origin
+      xyz="0 -0.1508 1.7523E-05"
+      rpy="3.1416 0 3.1416" />
+    <parent
+      link="L4_TOP_LEG" />
+    <child
+      link="L4_BOT" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L4_BOT_ROTATIVE">
+    <inertial>
+      <origin
+        xyz="-0.00629277801444755 -0.0830414590062419 -0.0319165942280321"
+        rpy="0 0 0" />
+      <mass
+        value="0.285915110261203" />
+      <inertia
+        ixx="0.000391967075589632"
+        ixy="-5.69151182132474E-06"
+        ixz="-2.44368225971746E-06"
+        iyy="0.000304832593686097"
+        iyz="-3.38305288480085E-05"
+        izz="0.000379681330402964" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L4_BOT_ROTATIVE.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L4_BOT_ROTATIVE.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L4_BOT_ROTATIVE_JOINT"
+    type="continuous">
+    <origin
+      xyz="-4.4018E-05 -0.07834 0"
+      rpy="-1.5708 -1.5069 1.5708" />
+    <parent
+      link="L4_BOT" />
+    <child
+      link="L4_BOT_ROTATIVE" />
+    <axis
+      xyz="0.063863 0.99796 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L4_WHEEL">
+    <inertial>
+      <origin
+        xyz="-4.78914173582812E-05 5.98216207928215E-06 -0.00359023597081948"
+        rpy="0 0 0" />
+      <mass
+        value="0.11905862963532" />
+      <inertia
+        ixx="4.5809432944059E-05"
+        ixy="-1.96163824489073E-08"
+        ixz="-2.09097373369612E-08"
+        iyy="4.57337393947312E-05"
+        iyz="9.08901808401206E-09"
+        izz="8.34370700054306E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L4_WHEEL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FULL_ROBOT/meshes/L4_WHEEL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L4_WHEEL_JOINT"
+    type="continuous">
+    <origin
+      xyz="-0.010628 -0.16608 0"
+      rpy="0 0 -1.2429" />
+    <parent
+      link="L4_BOT_ROTATIVE" />
+    <child
+      link="L4_WHEEL" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
