@@ -7,9 +7,9 @@ rectangular chassis (700 x 500 mm).
 
 | Folder        | Format          | Use                                  |
 |---------------|-----------------|--------------------------------------|
-| `step/`       | STEP AP214      | Exchange format, any CAD software    |
-| `stl/`        | STL             | 3D printing                          |
-| `solidworks/` | SLDPRT          | Native SolidWorks files              |
+| `STEP/`       | STEP AP214      | Exchange format, any CAD software    |
+| `STL/`        | STL             | 3D printing                          |
+| `Solidworks/` | SLDPRT          | Native SolidWorks files              |
 | `urdf/`       | URDF + meshes   | Robot description                    |
 
 ## Parts
